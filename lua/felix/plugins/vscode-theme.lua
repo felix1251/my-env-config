@@ -2,9 +2,9 @@ vim.cmd [[ colorscheme vscode ]]
 
 require("bufferline").setup({
     options = {
-        buffer_close_icon = "X",
+        buffer_close_icon = "x",
         close_command = "bdelete %d",
-        close_icon = "X",
+        close_icon = "x",
         indicator = {
           style = "icon",
           icon = " ",
