@@ -1,7 +1,7 @@
 ## NVIM Setup
 
 ## Clone Repo
-```
+```shell
 # go to root path
 $ mkdir .config
 $ cd .config
