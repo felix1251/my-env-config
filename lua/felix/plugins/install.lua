@@ -26,6 +26,8 @@ return require('packer').startup(function(use)
     requires = 'nvim-tree/nvim-web-devicons'
   } 
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  use 'eandrju/cellular-automaton.nvim'  
+
   -- My plugins here
   -- use 'foo1/bar1.nvim'
   -- use 'foo2/bar2.nvim'
