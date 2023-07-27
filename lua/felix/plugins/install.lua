@@ -1,4 +1,4 @@
-local ensure_packer = function()
+ local ensure_packer = function()
   local fn = vim.fn
   local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
   if fn.empty(fn.glob(install_path)) > 0 then
@@ -27,7 +27,10 @@ return require('packer').startup(function(use)
   } 
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use 'eandrju/cellular-automaton.nvim'  
-
+  use {
+    'nvim-telescope/telescope.nvim', tag = '0.1.2',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
   -- My plugins here
   -- use 'foo1/bar1.nvim'
   -- use 'foo2/bar2.nvim'
