@@ -9,7 +9,7 @@ configs.setup {
   sync_install = false,
   ignore_install = { "" }, -- ignore all language highlight (python, haskell, etc..)
   highlight = {
-    enable = true,
+    enable = false,
     disable = { "" },
     additional_vim_regex_highlighting = true,
   },
