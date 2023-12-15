@@ -3,6 +3,7 @@ vim.keymap.set('n', '<leader>h', 'nohlsearchCR>')
 
 -- nvim tree
 vim.keymap.set('n', '<c-b>', ':NvimTreeFindFileToggle<CR>')
+vim.keymap.set('n', '<c-f>', ':NvimTreeFocus<CR>')
 
 -- animations
 vim.keymap.set("n", "<leader>rain", "<cmd>CellularAutomaton make_it_rain<CR>")
