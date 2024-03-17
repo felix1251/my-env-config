@@ -31,12 +31,9 @@ return require('packer').startup(function(use)
     'nvim-telescope/telescope.nvim', tag = '0.1.2',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
-  -- My plugins here
-  -- use 'foo1/bar1.nvim'
-  -- use 'foo2/bar2.nvim'
-
-  -- Automatically set up your configuration after cloning packer.nvim
-  -- Put this at the end after all plugins
+  -- use 'neovim/nvim-lspconfig'
+  -- use 'williamboman/nvim-lsp-installer'
+  -- use 'jose-elias-alvarez/null-ls.nvim'
   if packer_bootstrap then
     require('packer').sync()
   end
