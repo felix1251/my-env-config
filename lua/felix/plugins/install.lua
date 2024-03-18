@@ -31,9 +31,7 @@ return require('packer').startup(function(use)
     'nvim-telescope/telescope.nvim', tag = '0.1.2',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
-  -- use 'neovim/nvim-lspconfig'
-  -- use 'williamboman/nvim-lsp-installer'
-  -- use 'jose-elias-alvarez/null-ls.nvim'
+  
   if packer_bootstrap then
     require('packer').sync()
   end
