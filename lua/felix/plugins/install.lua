@@ -42,6 +42,7 @@ return require('packer').startup(function(use)
   use "williamboman/mason.nvim"
   use "williamboman/mason-lspconfig.nvim"
   use "neovim/nvim-lspconfig"
+  use "stevearc/conform.nvim"
 
   if packer_bootstrap then
     require('packer').sync()
