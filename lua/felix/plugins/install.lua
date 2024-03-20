@@ -31,7 +31,8 @@ return require('packer').startup(function(use)
     'nvim-telescope/telescope.nvim', tag = '0.1.2',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
-
+  
+  -- lsp & code completion
   use "github/copilot.vim"
   use "hrsh7th/nvim-cmp"
   use "hrsh7th/cmp-nvim-lsp"
