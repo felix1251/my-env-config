@@ -13,16 +13,22 @@ local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
-  use 'nvim-tree/nvim-tree.lua'
-  use 'nvim-tree/nvim-web-devicons'
-  use { 'nvim-lualine/lualine.nvim', requires = { 'nvim-tree/nvim-web-devicons', opt = true } }
-  use 'Mofiqul/vscode.nvim'
-  use { 'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons' }
-  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-  use 'eandrju/cellular-automaton.nvim'
-  use { 'nvim-telescope/telescope.nvim', tag = '0.1.2', requires = {{'nvim-lua/plenary.nvim'}} }
 
-  -- lsp/completion/formatter
+  -- Theme
+  use 'Mofiqul/vscode.nvim'
+  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+
+  -- Animation
+  use 'eandrju/cellular-automaton.nvim'
+
+  -- Navigation
+  use 'nvim-tree/nvim-web-devicons'
+  use 'nvim-tree/nvim-tree.lua'
+  use { 'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons' }
+  use { 'nvim-telescope/telescope.nvim', tag = '0.1.2', requires = {{'nvim-lua/plenary.nvim'}} }
+  use { 'nvim-lualine/lualine.nvim', requires = { 'nvim-tree/nvim-web-devicons', opt = true } }
+
+  -- Lsp/completion/formatter
   use "github/copilot.vim"
   use "hrsh7th/nvim-cmp"
   use "hrsh7th/cmp-nvim-lsp"
