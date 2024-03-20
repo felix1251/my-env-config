@@ -17,7 +17,7 @@ lsp_defaults.capabilities = vim.tbl_deep_extend(
   require('cmp_nvim_lsp').default_capabilities()
 )
 
-require("lspconfig").lua_ls.setup {
+lspconfig.lua_ls.setup {
   settings = {
     Lua = {
       diagnostics = {
@@ -33,20 +33,20 @@ require("lspconfig").lua_ls.setup {
   }
 }
 
-require("lspconfig").tailwindcss.setup({
+lspconfig.tailwindcss.setup({
   settings = {
     tailwindCSS = {
       experimental = {
-        classRegex = {{"class: ?\"([^\"]*)\"", "([a-zA-Z0-9\\-:]+)"}, {"(\\.[\\w\\-.]+)[\\n\\=\\{\\s]", "([\\w\\-]+)"}}
+        classRegex = { { "class: ?\"([^\"]*)\"", "([a-zA-Z0-9\\-:]+)" }, { "(\\.[\\w\\-.]+)[\\n\\=\\{\\s]", "([\\w\\-]+)" } }
       }
     }
   }
 })
 
-require("lspconfig").rubocop.setup({})
-require("lspconfig").solargraph.setup({})
-require("lspconfig").tsserver.setup({})
-require("lspconfig").gopls.setup({})
+lspconfig.rubocop.setup({})
+lspconfig.solargraph.setup({})
+lspconfig.tsserver.setup({})
+lspconfig.gopls.setup({})
 
 vim.api.nvim_create_autocmd('LspAttach', {
   group = vim.api.nvim_create_augroup('UserLspConfig', {}),
