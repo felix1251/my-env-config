@@ -34,6 +34,10 @@ return require('packer').startup(function(use)
   use "neovim/nvim-lspconfig"
   use "stevearc/conform.nvim"
 
+  -- Git
+  use "lewis6991/gitsigns.nvim"
+  use "tpope/vim-fugitive"
+
   if packer_bootstrap then
     require('packer').sync()
   end
