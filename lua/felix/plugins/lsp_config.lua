@@ -33,11 +33,20 @@ require("lspconfig").lua_ls.setup {
   }
 }
 
+require("lspconfig").tailwindcss.setup({
+  settings = {
+    tailwindCSS = {
+      experimental = {
+        classRegex = {{"class: ?\"([^\"]*)\"", "([a-zA-Z0-9\\-:]+)"}, {"(\\.[\\w\\-.]+)[\\n\\=\\{\\s]", "([\\w\\-]+)"}}
+      }
+    }
+  }
+})
+
+require("lspconfig").rubocop.setup({})
 require("lspconfig").solargraph.setup({})
 require("lspconfig").tsserver.setup({})
 require("lspconfig").gopls.setup({})
-require("lspconfig").tailwindcss.setup({})
-require("lspconfig").rubocop.setup({})
 
 vim.api.nvim_create_autocmd('LspAttach', {
   group = vim.api.nvim_create_augroup('UserLspConfig', {}),
