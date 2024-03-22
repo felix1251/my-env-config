@@ -4,6 +4,7 @@ vim.keymap.set('n', '<leader>h', 'nohlsearchCR>')
 -- nvim tree
 vim.keymap.set('n', '<m-d>', ':NvimTreeFindFileToggle<CR>')
 vim.keymap.set('n', '<m-f>', ':NvimTreeFocus<CR>')
+vim.keymap.set('n', '<m-c>', ':NvimTreeCollapse<CR>')
 
 -- animations
 vim.keymap.set("n", "<leader>rain", "<cmd>CellularAutomaton make_it_rain<CR>")

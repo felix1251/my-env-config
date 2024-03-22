@@ -3,7 +3,8 @@ require("mason-lspconfig").setup({
     "lua_ls",
     "solargraph",
     "tsserver",
-    "tailwindcss"
+    "tailwindcss",
+    "rust_analyzer"
   }
 })
 
