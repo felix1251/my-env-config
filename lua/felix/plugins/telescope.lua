@@ -2,6 +2,7 @@ require('telescope').setup {
   defaults = {
     -- Default configuration for telescope goes here:
     -- config_key = value,
+    path_display = { "smart" },
     mappings = {
       i = {
         -- map actions.which_key to <C-h> (default: <C-/>)
