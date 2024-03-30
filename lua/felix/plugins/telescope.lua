@@ -5,11 +5,11 @@ require('telescope').setup {
     path_display = { "smart" },
     file_ignore_patterns = {
       "node_modules/.*",
-      "%.cache",
-      "yarn.lock",
-      "package-lock.json",
       "target/.*",
       ".git/.*",
+      "package%-lock.json",
+      "%.cache",
+      "%.lock",
     },
     mappings = {
       i = {
