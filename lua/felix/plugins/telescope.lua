@@ -3,6 +3,14 @@ require('telescope').setup {
     -- Default configuration for telescope goes here:
     -- config_key = value,
     path_display = { "smart" },
+    file_ignore_patterns = {
+      "node_modules/.*",
+      "%.cache",
+      "yarn.lock",
+      "package-lock.json",
+      "target/.*",
+      ".git/.*",
+    },
     mappings = {
       i = {
         -- map actions.which_key to <C-h> (default: <C-/>)
