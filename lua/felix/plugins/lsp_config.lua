@@ -47,3 +47,4 @@ lspconfig.tailwindcss.setup({
 lspconfig.solargraph.setup({})
 lspconfig.tsserver.setup({})
 lspconfig.gopls.setup({})
+lspconfig.rubocop.setup({})
