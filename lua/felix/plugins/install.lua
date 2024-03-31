@@ -17,6 +17,7 @@ return require('packer').startup(function(use)
 
   -- Theme
   use 'Mofiqul/vscode.nvim'
+  use "lukas-reineke/indent-blankline.nvim"
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
   -- Animation
