@@ -16,9 +16,9 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
   -- Theme
-  use 'Mofiqul/vscode.nvim'
   use "lukas-reineke/indent-blankline.nvim"
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  use 'ellisonleao/gruvbox.nvim'
 
   -- Animation
   use 'eandrju/cellular-automaton.nvim'
