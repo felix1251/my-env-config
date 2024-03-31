@@ -4,7 +4,8 @@ require("mason-lspconfig").setup({
     "solargraph",
     "tsserver",
     "tailwindcss",
-    "rust_analyzer"
+    "rust_analyzer",
+    "rubocop"
   }
 })
 
