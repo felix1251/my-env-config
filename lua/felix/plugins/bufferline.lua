@@ -10,9 +10,10 @@ require("bufferline").setup({
     offsets = {
       {
         filetype = "NvimTree",
+        separator = true,
         text = "EXPLORER",
-        text_align = "center"
-      }
+        highlight = "NvimTreeNormal",
+      },
     },
     left_trunc_marker = "",
     modified_icon = "●",
@@ -43,3 +44,17 @@ require("bufferline").setup({
     },
   }
 })
+
+local fixBufferLineSeparator = function()
+  vim.api.nvim_set_hl(
+    0,
+    "BufferLineOffsetSeparator",
+    vim.api.nvim_get_hl_by_name('NvimTreeWinSeparator', true)
+  )
+end
+
+vim.api.nvim_create_autocmd("ColorScheme", {
+  callback = fixBufferLineSeparator,
+})
+
+fixBufferLineSeparator()
