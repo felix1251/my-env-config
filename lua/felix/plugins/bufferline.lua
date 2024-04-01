@@ -3,10 +3,6 @@ require("bufferline").setup({
     buffer_close_icon = "x",
     close_command = "bdelete %d",
     close_icon = "x",
-    indicator = {
-      style = "icon",
-      icon = " ",
-    },
     offsets = {
       {
         filetype = "NvimTree",
@@ -15,6 +11,7 @@ require("bufferline").setup({
         highlight = "NvimTreeNormal",
       },
     },
+    indicator_icon = " ",
     left_trunc_marker = "",
     modified_icon = "●",
     right_mouse_command = "bdelete! %d",
