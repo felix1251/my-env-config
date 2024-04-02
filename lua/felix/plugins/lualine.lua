@@ -9,6 +9,7 @@ require('lualine').setup {
         'filename',
         path = 1,
       }
-    }
+    },
+    lualine_x = { 'tabnine' }
   }
 }
