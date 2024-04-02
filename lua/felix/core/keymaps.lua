@@ -1,13 +1,10 @@
 -- search
-vim.keymap.set('n', '<leader>h', 'nohlsearchCR>')
+vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
 
 -- nvim tree
 vim.keymap.set('n', '<m-d>', ':NvimTreeFindFileToggle<CR>')
 vim.keymap.set('n', '<m-f>', ':NvimTreeFocus<CR>')
 vim.keymap.set('n', '<m-c>', ':NvimTreeCollapse<CR>')
-
--- animations
-vim.keymap.set("n", "<leader>rain", "<cmd>CellularAutomaton make_it_rain<CR>")
 
 -- telescope
 local builtin = require('telescope.builtin')
