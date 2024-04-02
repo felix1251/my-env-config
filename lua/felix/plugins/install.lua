@@ -9,6 +9,8 @@ local ensure_packer = function()
   return false
 end
 
+
+
 local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
@@ -42,6 +44,9 @@ return require('packer').startup(function(use)
   -- Git
   use "lewis6991/gitsigns.nvim"
   use "tpope/vim-fugitive"
+
+  -- Comment
+  use 'numToStr/Comment.nvim'
 
   if packer_bootstrap then
     require('packer').sync()
