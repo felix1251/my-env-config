@@ -9,8 +9,6 @@ local ensure_packer = function()
   return false
 end
 
-
-
 local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
@@ -19,8 +17,8 @@ return require('packer').startup(function(use)
 
   -- Theme
   use "lukas-reineke/indent-blankline.nvim"
-  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use 'ellisonleao/gruvbox.nvim'
+  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
   -- Navigation
   use 'nvim-tree/nvim-web-devicons'
