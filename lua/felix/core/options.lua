@@ -19,7 +19,7 @@ opt.ignorecase = true
 opt.smartcase = true
 
 -- curson line
-opt.cursorline = true
+opt.cursorline = false
 
 -- appearance
 opt.termguicolors = true
