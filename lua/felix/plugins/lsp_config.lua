@@ -44,6 +44,7 @@ lspconfig.tailwindcss.setup({
   }
 })
 
+lspconfig.rust_analyzer.setup({})
 lspconfig.solargraph.setup({})
 lspconfig.tsserver.setup({})
 lspconfig.gopls.setup({})
