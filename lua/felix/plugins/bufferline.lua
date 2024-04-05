@@ -1,8 +1,8 @@
 require("bufferline").setup({
   options = {
-    buffer_close_icon = "x",
+    buffer_close_icon = "",
     close_command = "bdelete %d",
-    close_icon = "x",
+    close_icon = "",
     offsets = {
       {
         filetype = "NvimTree",
@@ -33,11 +33,11 @@ require("bufferline").setup({
       bg = "NONE"
     },
     separator = {
-      fg = "#fabd2f",
       bg = "NONE"
     },
     buffer_selected = {
-      bg = "NONE"
+      bg = "NONE",
+      italic = false
     },
   }
 })
