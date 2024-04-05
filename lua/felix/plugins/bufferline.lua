@@ -1,6 +1,9 @@
-require("bufferline").setup({
+local bufferline = require("bufferline")
+
+bufferline.setup({
   options = {
-    buffer_close_icon = "",
+    style_preset = bufferline.style_preset.no_italic,
+    buffer_close_icon = "󰅖",
     close_command = "bdelete %d",
     close_icon = "",
     offsets = {
@@ -12,16 +15,16 @@ require("bufferline").setup({
       },
     },
     indicator_icon = " ",
-    left_trunc_marker = "",
+    left_trunc_marker = "",
     modified_icon = "●",
     right_mouse_command = "bdelete! %d",
-    right_trunc_marker = "",
+    right_trunc_marker = "",
     show_close_icon = false,
     show_tab_indicators = false,
   },
   highlights = {
     fill = {
-      bg = "#1d2021"
+      bg = "NONE"
     },
     background = {
       bg = "NONE"
@@ -37,8 +40,10 @@ require("bufferline").setup({
     },
     buffer_selected = {
       bg = "NONE",
-      italic = false
     },
+    trunc_marker = {
+      bg = "NONE"
+    }
   }
 })
 
