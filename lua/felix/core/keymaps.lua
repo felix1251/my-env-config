@@ -44,3 +44,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
     end, opts)
   end,
 })
+
+vim.keymap.set('n', '<c-j>', ':cnext<CR>')
+vim.keymap.set('n', '<c-k>', ':cprev<CR>')
