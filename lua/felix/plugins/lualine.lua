@@ -10,6 +10,5 @@ require('lualine').setup {
         path = 1,
       }
     },
-    lualine_x = { 'tabnine' }
   }
 }
