@@ -15,17 +15,20 @@ return require('packer').startup(function(use)
   -- Package Manager
   use 'wbthomason/packer.nvim'
 
-  -- Theme
-  use "lukas-reineke/indent-blankline.nvim"
+  -- Color Scheme
   use 'ellisonleao/gruvbox.nvim'
+
+  -- Syntax Highlighting
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+
+  -- Indent lines
+  use "lukas-reineke/indent-blankline.nvim"
 
   -- Navigation
   use 'nvim-tree/nvim-web-devicons'
   use 'nvim-tree/nvim-tree.lua'
   use { 'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons' }
-  --- Install ripgrep if problem using live grep
-  use { 'nvim-telescope/telescope.nvim', tag = '0.1.6', requires = { { 'nvim-lua/plenary.nvim' } } }
+  use { 'nvim-telescope/telescope.nvim', tag = '0.1.6', requires = { { 'nvim-lua/plenary.nvim' } } } -- Install ripgrep if problem using live grep
   use { 'nvim-lualine/lualine.nvim', requires = { 'nvim-tree/nvim-web-devicons', opt = true } }
 
   -- Lsp/completion/formatter
