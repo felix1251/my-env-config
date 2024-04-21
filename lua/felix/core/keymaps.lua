@@ -13,6 +13,11 @@ vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<laader>fh', builtin.help_tags, {})
 
+-- Bufferline
+vim.keymap.set('n', '<m-n>', ':BufferLineCycleNext<CR>')
+vim.keymap.set('n', '<m-p>', ':BufferLineCyclePrev<CR>')
+vim.keymap.set('n', '<leader>co', ':BufferLineCloseOthers<CR>')
+
 -- Git
 vim.keymap.set('n', '<leader>gp', ':Gitsigns preview_hunk<CR>')
 
@@ -45,5 +50,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
   end,
 })
 
+-- LSP references
 vim.keymap.set('n', '<c-j>', ':cnext<CR>')
 vim.keymap.set('n', '<c-k>', ':cprev<CR>')
