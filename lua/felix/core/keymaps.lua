@@ -3,6 +3,7 @@ vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
 
 -- slpit windows
 vim.keymap.set('n', '<leader>s', ':vsplit<CR>')
+vim.keymap.set('n', '<leader>se', ':vsplit | e ')
 
 -- nvim tree
 vim.keymap.set('n', '<m-d>', ':NvimTreeFindFileToggle<CR>')
