@@ -1,6 +1,9 @@
 -- search
 vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
 
+-- slpit windows
+vim.keymap.set('n', '<leader>s', ':vsplit<CR>')
+
 -- nvim tree
 vim.keymap.set('n', '<m-d>', ':NvimTreeFindFileToggle<CR>')
 vim.keymap.set('n', '<m-f>', ':NvimTreeFocus<CR>')
