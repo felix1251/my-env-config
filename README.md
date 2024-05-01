@@ -16,14 +16,14 @@ $ git clone https://github.com/felix1251/my-nvim-config.git nvim
 
 Tabnine Binary Issue
 
-```
-bash ~/.local/share/nvim/site/pack/packer/start/tabnine-nvim/dl_binaries.sh
-```
-
-Tabnine required Unzip package
+> required Unzip package
 
 ```
 sudo apt-get install unzip
+```
+
+```
+bash ~/.local/share/nvim/site/pack/packer/start/tabnine-nvim/dl_binaries.sh
 ```
 
 Telescope Live Grep not working
