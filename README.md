@@ -16,7 +16,7 @@ $ git clone https://github.com/felix1251/my-nvim-config.git nvim
 
 Tabnine Binary Issue
 
-> required Unzip package
+> Required Unzip package
 
 ```
 sudo apt-get install unzip
