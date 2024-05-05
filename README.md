@@ -1,6 +1,6 @@
-## NVIM Setup
-
 ![image](https://github.com/felix1251/my-nvim-config/assets/73794251/2f9a890d-1be3-447e-b7f5-672ab7c54e7d)
+
+## NVIM Setup
 
 Clone Repo
 
