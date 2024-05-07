@@ -20,6 +20,7 @@ return require('packer').startup(function(use)
 
   -- Syntax Highlighting
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  use 'norcalli/nvim-colorizer.lua'
 
   -- Indent lines
   use "lukas-reineke/indent-blankline.nvim"
