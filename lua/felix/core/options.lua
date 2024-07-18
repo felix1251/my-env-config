@@ -10,9 +10,12 @@ opt.shiftwidth = 2
 opt.shiftround = true
 opt.expandtab = true
 opt.autoindent = true
+opt.smartindent = true
 
 -- line wrapping
 opt.wrap = true
+opt.breakindent = true
+opt.linebreak = true
 
 -- search settings
 opt.ignorecase = true
