@@ -2,7 +2,7 @@ require("mason-lspconfig").setup({
   ensure_installed = {
     "lua_ls",
     "solargraph",
-    "tsserver",
+    "ts_ls",
     "tailwindcss",
     "rust_analyzer",
     "rubocop"
@@ -46,6 +46,6 @@ lspconfig.tailwindcss.setup({
 
 lspconfig.rust_analyzer.setup({})
 lspconfig.solargraph.setup({})
-lspconfig.tsserver.setup({})
+lspconfig.ts_ls.setup({})
 lspconfig.gopls.setup({})
 lspconfig.rubocop.setup({})
