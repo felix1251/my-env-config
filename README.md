@@ -8,7 +8,7 @@ Clone Repo
 git clone https://github.com/felix1251/my-nvim-config.git ~/.config/nvim
 ```
 
-## Troubleshoot (Ubuntu)
+### Troubleshoot (Ubuntu)
 
 Tabnine Binary Issue
 
