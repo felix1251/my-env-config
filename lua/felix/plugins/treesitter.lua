@@ -15,3 +15,5 @@ configs.setup {
   },
   indent = { enable = true, disable = { "yaml" } },
 }
+
+vim.cmd('autocmd BufRead,BufNewFile *.jbuilder set filetype=ruby')
