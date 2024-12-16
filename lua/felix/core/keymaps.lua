@@ -24,6 +24,8 @@ vim.keymap.set('n', '<leader>co', ':BufferLineCloseOthers<CR>')
 
 -- Git
 vim.keymap.set('n', '<leader>gp', ':Gitsigns preview_hunk<CR>')
+vim.keymap.set('n', '<leader>df', ':Gitsigns diffthis<CR>')
+vim.keymap.set('n', '<leader>gb', ':Gitsigns blame<CR>')
 
 -- LSP
 vim.api.nvim_create_autocmd('LspAttach', {
