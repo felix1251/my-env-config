@@ -6,7 +6,8 @@ require("mason-lspconfig").setup({
     "tailwindcss",
     "rust_analyzer",
     "rubocop",
-    "eslint"
+    "eslint",
+    "gopls"
   }
 })
 
@@ -49,6 +50,5 @@ lspconfig.rust_analyzer.setup({})
 lspconfig.solargraph.setup({})
 lspconfig.ts_ls.setup({})
 lspconfig.gopls.setup({})
-lspconfig.rubocop.setup({})
 lspconfig.rubocop.setup({})
 lspconfig.eslint.setup({})
