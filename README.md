@@ -1,5 +1,9 @@
 ## My Environment Config
 
+- [x] [Alacritty](https://alacritty.org/index.html)
+- [x] TMUX
+- [x] Neovim
+
 Clone Repo
 
 ```
