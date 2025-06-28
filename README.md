@@ -1,11 +1,11 @@
-![image](https://github.com/felix1251/my-nvim-config/assets/73794251/2f9a890d-1be3-447e-b7f5-672ab7c54e7d)
-
-## NVIM
+## My Environment Config
 
 Clone Repo
 
 ```
-git clone https://github.com/felix1251/my-nvim-config.git ~/.config/nvim
+git clone https://github.com/felix1251/my-nvim-config.git temp
+mv temp/* ~/.config/
+rm -rf temp
 ```
 
 ### Troubleshoot (Ubuntu)
