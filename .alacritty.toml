@@ -7,6 +7,7 @@ padding.x = 0
 padding.y = 0
 decorations = "Buttonless"
 decorations_theme_variant = "Dark"
+startup_mode = "Maximized"
 
 [font]
 normal.family = "FiraCode Nerd Font Mono"
