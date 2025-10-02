@@ -4,7 +4,7 @@ require("mason-lspconfig").setup({
     "solargraph",
     "ts_ls",
     "tailwindcss",
-    "rust_analyzer",
+    -- "rust_analyzer",
     "rubocop",
     "eslint",
     "gopls"
@@ -46,9 +46,17 @@ lspconfig.tailwindcss.setup({
   }
 })
 
-lspconfig.rust_analyzer.setup({})
 lspconfig.solargraph.setup({})
 lspconfig.ts_ls.setup({})
 lspconfig.gopls.setup({})
 lspconfig.rubocop.setup({})
 lspconfig.eslint.setup({})
+
+lspconfig.rust_analyzer.setup({
+  settings = {
+    ["rust-analyzer"] = {
+      cargo = { allFeatures = true },
+      procMacro = { enable = true },
+    },
+  },
+})
