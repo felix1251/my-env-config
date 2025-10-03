@@ -19,11 +19,3 @@ chmod +x setup_config.sh
 ```
 ./setup_config.sh
 ```
-
-### Troubleshoot (Ubuntu)
-
-Telescope Live Grep not working
-
-```
-sudo apt-get install ripgrep
-```
