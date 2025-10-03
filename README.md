@@ -7,9 +7,17 @@
 Clone Repo
 
 ```
-git clone https://github.com/felix1251/my-nvim-config.git temp
-mv temp/* ~/.config/
-rm -rf temp
+git clone git@github.com:felix1251/my-env-config.git my-config
+```
+
+Create Symlink
+
+```
+chmod +x symlink.sh
+```
+
+```
+./symlink.sh
 ```
 
 ### Troubleshoot (Ubuntu)
