@@ -141,8 +141,7 @@ install_tmux_tmp() {
     "$TMUX_TPM_DIR/bin/install_plugins"
 } 
 
-# Symlink
-link() {
+symlink() {
     src=$1
     dest=$2
 
@@ -172,7 +171,6 @@ install_alacritty
 install_tmux
 install_tmux_tmp
 
-# Symlink
-link "$DOTFILES/nvim" "$HOME/.config/nvim"
-link "$DOTFILES/tmux/.tmux.conf" "$HOME/.tmux.conf"
-link "$DOTFILES/alacritty/alacritty.yml" "$HOME/.config/alacritty/alacritty.yml"
+symlink "$DOTFILES/nvim" "$HOME/.config/nvim"
+symlink "$DOTFILES/tmux/.tmux.conf" "$HOME/.tmux.conf"
+symlink "$DOTFILES/alacritty/alacritty.yml" "$HOME/.config/alacritty/alacritty.yml"
