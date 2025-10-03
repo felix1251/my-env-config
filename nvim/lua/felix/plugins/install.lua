@@ -43,7 +43,6 @@ return require('packer').startup(function(use)
   use "williamboman/mason-lspconfig.nvim"
   use "neovim/nvim-lspconfig"
   use "stevearc/conform.nvim"
-  use { 'codota/tabnine-nvim', run = "./dl_binaries.sh" } -- install unzip if problem installing
 
   -- Git
   use "lewis6991/gitsigns.nvim"

@@ -4,44 +4,26 @@
 - [x] TMUX
 - [x] Neovim
 
-Clone Repo
+Clone and setup config
 
 ```
 git clone git@github.com:felix1251/my-env-config.git ~/my-config
 ```
 
-Create Symlink
+Setup Config
 
 ```
-chmod +x symlink.sh
+chmod +x setup_config.sh
 ```
 
 ```
-./symlink.sh
+./setup_config.sh
 ```
 
 ### Troubleshoot (Ubuntu)
-
-Tabnine Binary Issue
-
-> Required Unzip package
-
-```
-sudo apt-get install unzip
-```
-
-```
-bash ~/.local/share/nvim/site/pack/packer/start/tabnine-nvim/dl_binaries.sh
-```
 
 Telescope Live Grep not working
 
 ```
 sudo apt-get install ripgrep
-```
-
-## TMUX
-
-```
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
