@@ -7,7 +7,7 @@
 Clone Repo
 
 ```
-git clone git@github.com:felix1251/my-env-config.git my-config
+git clone git@github.com:felix1251/my-env-config.git ~/my-config
 ```
 
 Create Symlink
