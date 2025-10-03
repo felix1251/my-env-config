@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
-DOTFILES="$HOME/my-config"
 NVIM_VERSION="0.11.3"
+ALACRITTY_VERSION="0.15.1"
+DOTFILES="$HOME/my-config"
 TMUX_TPM_DIR="$HOME/.tmux/plugins/tpm"
 
 install_neovim() {
@@ -34,8 +35,6 @@ install_neovim() {
         exit 1
     fi
 }
-
-install_neovim
 
 install_ripgrep() {
     if command -v rg >/dev/null 2>&1; then
@@ -70,9 +69,66 @@ install_ripgrep() {
     fi
 }
 
-install_ripgrep
+install_alacritty() {
+    if command -v alacritty >/dev/null 2>&1; then
+        echo "Alacritty is already installed: $(alacritty --version)"
+        return
+    fi
 
-clone_and_install_tmp() {
+    echo "Installing Alacritty version $ALACRITTY_VERSION in current directory..."
+
+    if [[ "$OSTYPE" == "darwin"* ]]; then
+        TAR_FILE="Alacritty-v$ALACRITTY_VERSION.zip"
+        curl -LO "https://github.com/alacritty/alacritty/releases/download/v$ALACRITTY_VERSION/$TAR_FILE"
+        unzip "$TAR_FILE" -d alacritty-$ALACRITTY_VERSION
+        sudo mv "alacritty-$ALACRITTY_VERSION/Alacritty.app/Contents/MacOS/alacritty" /usr/local/bin/alacritty
+    elif [[ -f /etc/lsb-release ]] || [[ -f /etc/debian_version ]]; then
+        TAR_FILE="Alacritty-v$ALACRITTY_VERSION.tar.gz"
+        curl -LO "https://github.com/alacritty/alacritty/releases/download/v$ALACRITTY_VERSION/$TAR_FILE"
+        tar -xzf "$TAR_FILE"
+        sudo mv alacritty /usr/local/bin/alacritty
+    else
+        echo "Unsupported OS. Please install Alacritty $ALACRITTY_VERSION manually."
+        exit 1
+    fi
+
+    echo "Alacritty $VERSION installed successfully: $(alacritty --version)"
+}
+
+install_tmux() {
+    if command -v tmux >/dev/null 2>&1; then
+        echo "tmux is already installed: $(tmux -V)"
+        return 0
+    fi
+
+    echo "Installing tmux..."
+
+    if [[ "$OSTYPE" == "darwin"* ]]; then
+        # macOS
+        if ! command -v brew >/dev/null 2>&1; then
+            echo "Homebrew not found. Please install Homebrew first: https://brew.sh/"
+            exit 1
+        fi
+        brew install tmux
+    elif [[ -f /etc/lsb-release ]] || [[ -f /etc/debian_version ]]; then
+        # Ubuntu/Debian
+        sudo apt update
+        sudo apt install -y tmux
+    else
+        echo "Unsupported OS. Please install tmux manually."
+        exit 1
+    fi
+
+    # Verify installation
+    if command -v tmux >/dev/null 2>&1; then
+        echo "tmux installed successfully: $(tmux -V)"
+    else
+        echo "tmux installation failed!"
+        exit 1
+    fi
+}
+
+install_tmux_tmp() {
     # Replace if exists
     if [ -d "$TMUX_TPM_DIR" ]; then
         echo "Removing existing TPM at $TMUX_TPM_DIR"
@@ -84,8 +140,6 @@ clone_and_install_tmp() {
 
     "$TMUX_TPM_DIR/bin/install_plugins"
 } 
-
-clone_and_install_tmp
 
 # Symlink
 link() {
@@ -112,11 +166,13 @@ link() {
     echo "Linked $dest -> $src"
 }
 
-# Neovim
+install_neovim
+install_ripgrep
+install_alacritty
+install_tmux
+install_tmux_tmp
+
+# Symlink
 link "$DOTFILES/nvim" "$HOME/.config/nvim"
-
-# Tmux
 link "$DOTFILES/tmux/.tmux.conf" "$HOME/.tmux.conf"
-
-# Alacritty
 link "$DOTFILES/alacritty/alacritty.yml" "$HOME/.config/alacritty/alacritty.yml"
