@@ -18,11 +18,13 @@ install_neovim() {
         curl -LO "https://github.com/neovim/neovim/releases/download/v$NVIM_VERSION/nvim-macos.tar.gz"
         tar xzf "nvim-macos.tar.gz"
         sudo mv nvim-osx64/bin/nvim /usr/local/bin/nvim
+        sudo rm -rf nvim-osx64
     elif [[ -f /etc/lsb-release ]] || [[ -f /etc/debian_version ]]; then
         # Ubuntu/Debian
         curl -LO "https://github.com/neovim/neovim/releases/download/v$NVIM_VERSION/nvim-linux64.tar.gz"
         tar xzf "nvim-linux64.tar.gz"
         sudo mv nvim-linux64/bin/nvim /usr/local/bin/nvim
+        sudo rm -rf nvim-linux64
     else
         echo "Unsupported OS. Please install Neovim $NVIM_VERSION manually."
         exit 1
@@ -82,11 +84,13 @@ install_alacritty() {
         curl -LO "https://github.com/alacritty/alacritty/releases/download/v$ALACRITTY_VERSION/$TAR_FILE"
         unzip "$TAR_FILE" -d alacritty-$ALACRITTY_VERSION
         sudo mv "alacritty-$ALACRITTY_VERSION/Alacritty.app/Contents/MacOS/alacritty" /usr/local/bin/alacritty
+        sudo rm -rf alacritty-$ALACRITTY_VERSION
     elif [[ -f /etc/lsb-release ]] || [[ -f /etc/debian_version ]]; then
         TAR_FILE="Alacritty-v$ALACRITTY_VERSION.tar.gz"
         curl -LO "https://github.com/alacritty/alacritty/releases/download/v$ALACRITTY_VERSION/$TAR_FILE"
         tar -xzf "$TAR_FILE"
         sudo mv alacritty /usr/local/bin/alacritty
+        sudo rm -rf alacritty
     else
         echo "Unsupported OS. Please install Alacritty $ALACRITTY_VERSION manually."
         exit 1
@@ -98,7 +102,7 @@ install_alacritty() {
 install_tmux() {
     if command -v tmux >/dev/null 2>&1; then
         echo "tmux is already installed: $(tmux -V)"
-        return 0
+        return
     fi
 
     echo "Installing tmux..."
