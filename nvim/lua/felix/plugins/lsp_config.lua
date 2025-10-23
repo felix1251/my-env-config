@@ -18,7 +18,7 @@ vim.lsp.enable("gopls")
 vim.lsp.enable("rubocop")
 vim.lsp.enable("eslint")
 vim.lsp.enable("tailwindcss")
-vim.lsp.enable("rust_analyzer", {
+vim.lsp.enable("ust_analyzer", {
   settings = {
     ["rust-analyzer"] = {
       cargo = { allFeatures = true },
