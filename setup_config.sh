@@ -2,7 +2,7 @@
 
 NVIM_VERSION="0.11.3"
 ALACRITTY_VERSION="0.15.1"
-DOTFILES="$HOME/my-config"
+DOTFILES="$HOME/my-env-config"
 TMUX_TPM_DIR="$HOME/.tmux/plugins/tpm"
 
 install_neovim() {
@@ -15,10 +15,11 @@ install_neovim() {
 
     if [[ "$OSTYPE" == "darwin"* ]]; then
         # macOS
-        curl -LO "https://github.com/neovim/neovim/releases/download/v$NVIM_VERSION/nvim-macos.tar.gz"
-        tar xzf "nvim-macos.tar.gz"
-        sudo mv nvim-osx64/bin/nvim /usr/local/bin/nvim
-        sudo rm -rf nvim-osx64
+        if ! command -v brew >/dev/null 2>&1; then
+            echo "Homebrew not found. Please install Homebrew first: https://brew.sh/"
+            exit 1
+        fi
+        brew install neovim
     elif [[ -f /etc/lsb-release ]] || [[ -f /etc/debian_version ]]; then
         # Ubuntu/Debian
         curl -LO "https://github.com/neovim/neovim/releases/download/v$NVIM_VERSION/nvim-linux64.tar.gz"
@@ -177,4 +178,4 @@ install_tmux_tmp
 
 symlink "$DOTFILES/nvim" "$HOME/.config/nvim"
 symlink "$DOTFILES/tmux/.tmux.conf" "$HOME/.tmux.conf"
-symlink "$DOTFILES/alacritty/alacritty.yml" "$HOME/.config/alacritty/alacritty.yml"
+symlink "$DOTFILES/alacritty/alacritty.toml" "$HOME/.config/alacritty/alacritty.toml"
