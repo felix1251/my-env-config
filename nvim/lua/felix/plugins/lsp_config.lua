@@ -6,7 +6,6 @@ require("mason-lspconfig").setup({
     "tailwindcss",
     "rust_analyzer",
     "rubocop",
-    "eslint",
     "gopls"
   }
 })
@@ -16,9 +15,8 @@ vim.lsp.enable("solargraph")
 vim.lsp.enable("ts_ls")
 vim.lsp.enable("gopls")
 vim.lsp.enable("rubocop")
-vim.lsp.enable("eslint")
 vim.lsp.enable("tailwindcss")
-vim.lsp.enable("ust_analyzer", {
+vim.lsp.enable("rust_analyzer", {
   settings = {
     ["rust-analyzer"] = {
       cargo = { allFeatures = true },
