@@ -1,5 +1,8 @@
 require('telescope').setup {
   defaults = {
+    preview = {
+      treesitter = false
+    },
     -- Default configuration for telescope goes here:
     -- config_key = value,
     path_display = { "smart" },
