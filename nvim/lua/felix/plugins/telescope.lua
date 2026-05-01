@@ -3,6 +3,12 @@ require('telescope').setup {
     preview = {
       treesitter = false,
     },
+    layout_config = {
+      width = 0.99,
+      height = 0.99,
+      preview_width = 0.6,
+      prompt_position = "top",
+    },
     -- Default configuration for telescope goes here:
     -- config_key = value,
     path_display = { "smart" },
